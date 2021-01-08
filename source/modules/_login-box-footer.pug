@@ -1,0 +1,37 @@
+//-------------------------------------------------------
+//- Modules :: Login box footer
+//-------------------------------------------------------
+
+mixin loginBoxFooter()
+  .footer
+    .footer__share
+      button Share
+      button Share
+      button Share
+      button Share
+    .footer__controls
+      -
+        var controlList = [
+          {
+            link: '/#',
+            text: 'Question & Answer'
+          },
+          {
+            link: '/#',
+            text: 'Convention Use'
+          },
+          {
+            link: '/#',
+            text: 'Privacy policy'
+          },
+          {
+            link: '/#',
+            text: 'Law about commerce transaction'
+          }
+        ];
+      each control in controlList
+        a.link(href=control.link)
+          p >
+          p= control.text
+    .footer__copyright
+      p Display copyright

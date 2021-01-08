@@ -33,3 +33,11 @@ mixin buttons-link({ href, text, type, size, isFull, iconFont, iconImage })
       +icon-images(iconImage)(class='button__icon')
     span.button__text
       | #{text}
+
+mixin buttons-link-login({ href, text, type, size, iconImage })
+  a.button-link-login(
+    href= href ? href : '#'
+    role='button'
+  )&attributes(attributes)
+    img(src=iconImage)
+    span= text

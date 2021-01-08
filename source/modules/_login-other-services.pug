@@ -1,0 +1,33 @@
+//-------------------------------------------------------
+//- Modules :: Login other services
+//-------------------------------------------------------
+
+mixin loginOtherServices()
+  -
+    var serviceList = [
+      {
+        href: '/#', text: 'Login with Apple ID',
+        iconImage: 'https://cdn3.iconfinder.com/data/icons/inficons/512/apple.png'
+      },
+      {
+        href: '/#', text: 'Login with Apple ID',
+        iconImage: 'https://cdn3.iconfinder.com/data/icons/inficons/512/apple.png'
+      },
+      {
+        href: '/#', text: 'Login with Apple ID',
+        iconImage: 'https://cdn3.iconfinder.com/data/icons/inficons/512/apple.png'
+      },
+      {
+        href: '/#', text: 'Login with Apple ID',
+        iconImage: 'https://cdn3.iconfinder.com/data/icons/inficons/512/apple.png'
+      },
+      {
+        href: '/#', text: 'Login with Apple ID',
+        iconImage: 'https://cdn3.iconfinder.com/data/icons/inficons/512/apple.png'
+      }
+    ];
+
+  .login-service
+    p.login-service__title Login with other service account
+    each service in serviceList
+      +buttons-link-login(service)
