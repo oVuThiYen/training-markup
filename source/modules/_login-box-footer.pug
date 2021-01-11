@@ -13,25 +13,35 @@ mixin loginBoxFooter()
       -
         var controlList = [
           {
-            link: '/#',
-            text: 'Question & Answer'
+            href: '/#',
+            text: 'Question & Answer',
+            color: 'blue',
+            type: 'control',
+            fontSize: 14
           },
           {
-            link: '/#',
-            text: 'Convention Use'
+            href: '/#',
+            text: 'Convention Use',
+            color: 'blue',
+            type: 'control',
+            fontSize: 14
           },
           {
-            link: '/#',
-            text: 'Privacy policy'
+            href: '/#',
+            text: 'Privacy policy',
+            color: 'blue',
+            type: 'control',
+            fontSize: 14
           },
           {
-            link: '/#',
-            text: 'Law about commerce transaction'
+            href: '/#',
+            text: 'Law about commerce transaction',
+            color: 'blue',
+            type: 'control',
+            fontSize: 14
           }
         ];
       each control in controlList
-        a.link(href=control.link)
-          p >
-          p= control.text
+        +link(control)
     .footer__copyright
       p Display copyright

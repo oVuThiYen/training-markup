@@ -1,0 +1,14 @@
+//-------------------------------------------------------
+//- Modules :: Buttons
+//-------------------------------------------------------
+
+mixin link({href, text, type, color, fontSize})
+  a.link(
+  class= color ? `link--${color}` : null
+  class= fontSize ? `link--font-size-${fontSize}` : null
+  href= href ? href : '#'
+  role='link'
+  )&attributes(attributes)
+    if (type === 'control')
+      p >
+    p= text

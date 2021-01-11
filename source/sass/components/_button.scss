@@ -23,20 +23,23 @@
     width: 165px;
     height: 44px;
   }
-}
 
-.button-link-login {
-  width: 200px;
-  height: 46px;
-  border: 1px solid $light-grey;
-  margin: 5px auto;
-  padding: 5px;
-  @include flex-center-ver;
-  color: $black;
+  &--login {
+    width: 200px;
+    height: 46px;
+    border: 1px solid $light-grey;
+    background: $white;
+    font-weight: $font-weight-base;
+    border-radius: unset;
+    margin: 5px auto;
+    padding: 5px;
+    @include flex-center-ver;
+    color: $black;
 
-  img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
+    img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
   }
 }

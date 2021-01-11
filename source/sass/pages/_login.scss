@@ -20,15 +20,6 @@
   &__text-link {
     margin-top: 5px;
     display: block;
-    font-size: 15px;
     @include flex-center;
-
-    &--blue {
-      color: $blue;
-    }
-
-    &--red {
-      color: $red;
-    }
   }
 }

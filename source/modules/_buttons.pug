@@ -27,17 +27,13 @@ mixin buttons-link({ href, text, type, size, isFull, iconFont, iconImage })
     href= href ? href : '#'
     role='button'
   )&attributes(attributes)
-    if (iconFont !== '' && iconFont !== undefined)
-      +icon-fonts(iconFont)(class='button__icon')
-    if (iconImage !== '' && iconImage !== undefined)
-      +icon-images(iconImage)(class='button__icon')
-    span.button__text
-      | #{text}
-
-mixin buttons-link-login({ href, text, type, size, iconImage })
-  a.button-link-login(
-    href= href ? href : '#'
-    role='button'
-  )&attributes(attributes)
-    img(src=iconImage)
-    span= text
+    if (type === 'login')
+      img(src=iconImage)
+      span= text
+    else
+      if (iconFont !== '' && iconFont !== undefined)
+        +icon-fonts(iconFont)(class='button__icon')
+      if (iconImage !== '' && iconImage !== undefined)
+        +icon-images(iconImage)(class='button__icon')
+      span.button__text
+        | #{text}

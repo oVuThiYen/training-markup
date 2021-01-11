@@ -32,8 +32,10 @@ block main
             })
             .btn-submit
               +buttons-link({ href: '/#', text: 'Login', type: 'blue', size: 'big' })
-        a.login-box__text-link.login-box__text-link--blue(href='/#') Forgot password
-        a.login-box__text-link.login-box__text-link--red(href='/#') Create new account
+        .login-box__text-link
+          +link({href: '/#', text: 'Forgot password', color: 'blue', fontSize: 15})
+        .login-box__text-link
+          +link({href: '/#', text: 'Create new account', color: 'red', fontSize: 15})
         .login-box__other-service
           +loginOtherServices()
         .login-box__footer

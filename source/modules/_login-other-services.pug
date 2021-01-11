@@ -7,27 +7,33 @@ mixin loginOtherServices()
     var serviceList = [
       {
         href: '/#', text: 'Login with Apple ID',
-        iconImage: 'https://cdn3.iconfinder.com/data/icons/inficons/512/apple.png'
+        iconImage: 'https://cdn3.iconfinder.com/data/icons/inficons/512/apple.png',
+        type: 'login'
       },
       {
         href: '/#', text: 'Login with Apple ID',
-        iconImage: 'https://cdn3.iconfinder.com/data/icons/inficons/512/apple.png'
+        iconImage: 'https://cdn3.iconfinder.com/data/icons/inficons/512/apple.png',
+        type: 'login'
+
       },
       {
         href: '/#', text: 'Login with Apple ID',
-        iconImage: 'https://cdn3.iconfinder.com/data/icons/inficons/512/apple.png'
+        iconImage: 'https://cdn3.iconfinder.com/data/icons/inficons/512/apple.png',
+        type: 'login'
       },
       {
         href: '/#', text: 'Login with Apple ID',
-        iconImage: 'https://cdn3.iconfinder.com/data/icons/inficons/512/apple.png'
+        iconImage: 'https://cdn3.iconfinder.com/data/icons/inficons/512/apple.png',
+        type: 'login'
       },
       {
         href: '/#', text: 'Login with Apple ID',
-        iconImage: 'https://cdn3.iconfinder.com/data/icons/inficons/512/apple.png'
+        iconImage: 'https://cdn3.iconfinder.com/data/icons/inficons/512/apple.png',
+        type: 'login'
       }
     ];
 
   .login-service
     p.login-service__title Login with other service account
     each service in serviceList
-      +buttons-link-login(service)
+      +buttons-link(service)
