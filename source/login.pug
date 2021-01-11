@@ -4,4 +4,39 @@ block head
   +head('Login')
 
 block main
-  h1 Page login
+  .login
+    h1 Page login
+    .login-box
+      .login-box__logo
+      .login-box__content
+        h2.login-box__title Login
+        .login-box__form
+          form
+            +input({
+              label: 'Mail address',
+              id: 'email',
+              type: 'email',
+              error: 'Please fill this field',
+              required: true
+            })
+            +input({
+              label: 'Password',
+              id: 'password',
+              type: 'password',
+              required: true
+            })
+            +checkbox({
+              label: 'Remember login',
+              id: 'remember-login',
+              position: 'center'
+            })
+            .btn-submit
+              +buttons-link({ href: '/#', text: 'Login', type: 'blue', size: 'big' })
+        .login-box__text-link
+          +link({href: '/#', text: 'Forgot password', color: 'blue', fontSize: 15})
+        .login-box__text-link
+          +link({href: '/#', text: 'Create new account', color: 'red', fontSize: 15})
+        .login-box__other-service
+          +loginOtherServices()
+        .login-box__footer
+          +loginBoxFooter()

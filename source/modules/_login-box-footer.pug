@@ -1,0 +1,47 @@
+//-------------------------------------------------------
+//- Modules :: Login box footer
+//-------------------------------------------------------
+
+mixin loginBoxFooter()
+  .footer
+    .footer__share
+      button Share
+      button Share
+      button Share
+      button Share
+    .footer__controls
+      -
+        var controlList = [
+          {
+            href: '/#',
+            text: 'Question & Answer',
+            color: 'blue',
+            type: 'control',
+            fontSize: 14
+          },
+          {
+            href: '/#',
+            text: 'Convention Use',
+            color: 'blue',
+            type: 'control',
+            fontSize: 14
+          },
+          {
+            href: '/#',
+            text: 'Privacy policy',
+            color: 'blue',
+            type: 'control',
+            fontSize: 14
+          },
+          {
+            href: '/#',
+            text: 'Law about commerce transaction',
+            color: 'blue',
+            type: 'control',
+            fontSize: 14
+          }
+        ];
+      each control in controlList
+        +link(control)
+    .footer__copyright
+      p Display copyright

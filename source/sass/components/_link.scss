@@ -1,0 +1,23 @@
+.link {
+  color: $black;
+
+  &--blue {
+    color: $blue;
+  }
+
+  &--red {
+    color: $red;
+  }
+
+  &--font-size-15 {
+    font-size: 15px;
+  }
+
+  &--font-size-14 {
+    font-size: 14px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
